@@ -10,7 +10,8 @@
     "watch": "./node_modules/webpack-dev-server/bin/webpack-dev-server.js --inline --hot",
     "build": "./node_modules/webpack/bin/webpack.js",
     "test-watch": "./node_modules/karma/bin/karma start",
-    "test": "./node_modules/karma/bin/karma start --single-run"
+    "test": "./node_modules/karma/bin/karma start --single-run",
+    "lint": "./node_modules/.bin/eslint ./**/*.js"
   },
   "repository": {
     "type": "git",
