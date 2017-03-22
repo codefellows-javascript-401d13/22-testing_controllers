@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html ng-app="mooApp">
+  <head>
+    <title>Talking Cows</title>
+  </head>
+  <body ng-controller="MooController as mooCtrl">
+    <header>
+      <article>{{MooCtrl.name}}</article>
+      <nav ng-controller="NavController as navCtrl">
+        <ul>
+          <li ng-repeat="route in navCtrl.routes">
+            <a href="link.url">{{route.name}}</a>
+          </li>
+        </ul>
+      </nav>
+    </header>
+    <main>
+      <section class="container" ng-init="mooCtrl.current">
+        <h2>{{mooCtrl.title}}</h2>
+        <pre class="cow">{{mooCtrl.update(mooCtrl.text)}}</pre>
+        <form ng-submit="mooCtrl.speak(MooCtrl.text)" name="mooForm" no validate>
+          <ul>
+            <li>Choose a cow:</li>
+            <li>
+              <select ng-model="mooCtrl.current">
+                <option ng-repeat="cowfile in mooCtrl.cowfiles" value="{{cowfile}}">{{cowfile}}</option>
+              </select>
+            </li>
+            <li>What shall the cow say?</li>
+            <li><input type="text" ng-model="mooCtrl.text"></li>
+            <li>View it below!</li>
+            <li><button type="submit">CLICK TO VIEW</button></li>
+          </ul>
+        </form>
+        <hr>
+        <div ng-show="mooCtrl.spoken">
+          Your last cow:
+          <pre>{{mooCtrl.spoken}}</pre>
+        </div>
+        <button type="button" ng-click="mooCtrl.undo()">UNDO THIS COW</button>
+      </section>
+    </main>
+    <footer>mooCtrl.name</footer>
+  </body>
+<html>
