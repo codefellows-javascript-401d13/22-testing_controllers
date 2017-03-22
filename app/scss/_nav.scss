@@ -1,0 +1,52 @@
+//:::: nav & header styles :::://
+
+header {
+  background-color: $nav-bg;
+  width: 100%;
+  height: 8%;
+  color: $header-color;
+}
+
+.logo-container {
+  display: inline-block;
+  margin: 2% 0% 3% 3%;
+  position: relative;
+
+  h1 {
+    display: inline-block;
+    font-size: 22px;
+    position: absolute;
+    top: 10px;
+    left: 50px;
+  }
+
+  #logo {
+    display: inline-block;
+    position: absolute;
+  }
+}
+
+.nav-bar {
+  display: inline-block;
+  margin: 0% 0% 3% 50%;
+
+  ul {
+    display: inline;
+
+    li {
+      display: inline;
+      padding: 0px 10px 0px 10px;
+
+      a {
+        font-size: 20px;
+      }
+    }
+  }
+}
+
+.nav-link {
+  font-size: 20px;
+  text-decoration: none;
+  color: $header-color;
+  font-family: sans-serif;
+}

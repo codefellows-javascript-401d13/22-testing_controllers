@@ -1,0 +1,14 @@
+//:::: footer :::://
+
+footer {
+  height: 90px;
+  background-color: $footer-bg;
+  position: relative;
+
+  p {
+    display: inline-block;
+    position: absolute;
+    top: 70%;
+    left: 89%;
+  }
+}
