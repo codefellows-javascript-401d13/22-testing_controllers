@@ -1,0 +1,102 @@
+body {
+  font-family: $font;
+  font-size: $fontSize;
+  border: 1px solid black;
+  width: 70%;
+  margin-left: 15%;
+  margin-top: 5%;
+}
+
+main, header, footer {
+  color: $color;
+  background-color: $bgColor;
+  padding: $stdPadding;
+  margin: 0.2%;
+}
+
+h2 {
+  margin-top: $stdMargin;
+  padding-left: $stdPadding;
+}
+
+header {
+  height: 4vw;
+  color: $bgColor;
+  background-color: $color;
+}
+
+nav {
+  ul {
+    display: inline-block;
+    float: right;
+    min-width: 50%;
+    text-align: right;
+    margin-right: $stdMargin;
+  }
+  li {
+    display: inline-block;
+    font-size: $fontSize * 0.7;
+    margin-left: $stdMargin * 2;
+    margin-top: 1.4vw;
+  }
+}
+
+a {
+  text-decoration: none;
+  &:visited {
+    color: $bgColor;
+  }
+}
+
+.cow, form, div {
+  display: inline-block;
+  margin: $stdMargin;
+  padding: $stdPadding;
+}
+
+.cow, div {
+  border: 2px solid $color;
+  min-width: 50%;
+}
+
+article {
+  display: inline-block;
+  float: left;
+  margin-top: 1vw;
+  margin-left: $stdMargin;
+}
+
+form {
+  ul {
+    font-size: $fontSize * 0.7;
+  }
+  li {
+    display: block;
+    margin-bottom: $stdMargin * 3;
+  }
+}
+
+option, input, button, select {
+  font-size: $fontSize * 0.6;
+  color: $color;
+  border: 0.2vw solid $color;
+  border-radius: 1vw;
+  width: 17vw;
+  padding-top: 0.5vw;
+  padding-bottom: 0.4vw;
+  text-align: center;
+  vertical-align: middle;
+}
+
+button {
+  background-color: $color;
+  color: $bgColor;
+}
+
+footer {
+  height: 5vw;
+  background-color: #909090;
+  text-align: right;
+  font-size: $fontSize / 2;
+  line-height: 10vw;
+}
