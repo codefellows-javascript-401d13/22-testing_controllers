@@ -1,5 +1,5 @@
 {
-  "name": "testing-controllers-demo",
+  "name": "lab-will",
   "version": "1.0.0",
   "description": "",
   "main": "karma.conf.js",
@@ -33,6 +33,7 @@
     "jasmine-core": "^2.5.2",
     "karma": "^1.4.0",
     "karma-jasmine": "^1.1.0",
+    "karma-mocha-reporter": "^2.2.3",
     "karma-phantomjs-launcher": "^1.0.2",
     "karma-webpack": "^2.0.1",
     "webpack-dev-server": "^1.16.2"
