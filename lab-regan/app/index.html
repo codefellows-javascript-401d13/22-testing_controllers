@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html ng-app='cowsayLab'>
+  <head>
+    <title>You Have Arrived In Creature Land!</title>
+  </head>
+  <body>
+    <header>
+      <nav ng-controller='NavController as navCtrl' class='navMenu'>
+        <div class='navLeft'>
+          <div class='monster'>
+            <img src="../assets/cute-monster.svg" alt="">
+          </div>
+          <div>Creature Creeps!</div>
+        </div>
+        <div class='navRight'>
+          <ul>
+            <li ng-repeat='route in navCtrl.routes'>
+              <a href="{{ route.url }}"> {{ route.name }} </a>
+            </li>
+          </ul>
+        </div>
+      </nav>
+    </header>
+    <main>
+      <section class='container' ng-controller='CowsayController as cowsayCtrl' ng-init='cowsayCtrl.current="squirrel"'>
+        <div class='topLeftContent'>
+          <h2>{{ cowsayCtrl.title }}</h2>
+          <pre class='cow'>
+            {{ cowsayCtrl.update(cowsayCtrl.text)}}
+          </pre>
+        </div>
+
+        <form
+
+        ng-submit='cowsayCtrl.speak(cowsayCtrl.text)'
+        name='cowsayForm'
+        novalidate>
+          <div class='upperForm'>
+            <label for="select">Choose Your Creature</label>
+            <select ng-model='cowsayCtrl.current'>
+              <option ng-repeat='cowfile in cowsayCtrl.cowfiles' value='{{ cowfile }}'>
+                {{cowfile}}
+              </option>
+            </select>
+            <label for="textbox">Give the creep some words!</label>
+            <input type="text" ng-model='cowsayCtrl.text' required>
+            <label for="speak">Let the creature creep!</label>
+            <button type='submit'>CREEP!</button>
+          </div>
+          <div ng-show='cowsayCtrl.spoken' class='history'>
+            <div class='bottomLeftContent'>
+              <pre class='cow'>
+                {{ cowsayCtrl.spoken }}
+              </pre>
+            </div>
+            <div class='undo'>
+              <button class='undoButton' type='button' ng-click='cowsayCtrl.undo()'>Undo!</button>
+            </div>
+          </div>
+        </form>
+      </section>
+    </main>
+    <footer><div>end</div>
+    <p>Icons made by <a href="http://www.freepik.com" title="Freepik">Freepik</a> from <a href="http://www.flaticon.com" title="Flaticon">www.flaticon.com</a> is licensed by <a href="http://creativecommons.org/licenses/by/3.0/" title="Creative Commons BY 3.0" target="_blank">CC 3.0 BY</a></p>
+    </footer>
+  </body>
+</html>

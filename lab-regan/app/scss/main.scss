@@ -1,0 +1,130 @@
+//base styles
+* {
+  box-sizing: border-box;
+}
+body {
+  min-height: 100%;
+  // display: flex;
+  background: #31CF7F;
+  font-family: 'Nunito', sans-serif;
+}
+header {
+  display: flex;
+  align-items: center;
+  height: 4em;
+  background: #2FB4C5;
+  nav {
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    .navLeft{
+      display: flex;
+      margin-left: 0.5em;
+      align-items: center;
+      width: 35%;
+      color: #eee;
+      font-size: 1.2em;
+    }
+    .navRight{
+      display: flex;
+      align-items: center;
+      width: 30%;
+      ul {
+        width: 90%;
+        display: flex;
+        justify-content: space-between;
+        a{
+          text-decoration: none;
+          color: #eee;
+        }
+        li:hover {
+          text-decoration: underline;
+        }
+      }
+    }
+  }
+}
+
+footer {
+border-top: 1px solid #491763;
+display: flex;
+align-items: center;
+justify-content: center;
+height: 3em;
+background: #2FB4C5;
+margin-top: 10em;
+padding: 4em;
+color: #eee;
+flex-direction: column;
+p {
+  font-size: 9px;
+  display: block;
+}
+}
+
+
+//general element rules
+h2 {
+  font-size: 8vh;
+  color: #eee;
+  margin: 2% 0 0 2.5%;
+  // width: 45%;
+}
+
+button {
+  width: 100%;
+}
+
+//layout and modules
+.cow {
+    border: 0.5em solid #491763;
+    color: #eee;
+    margin: 2% 0 0 2.5%;
+    width: 45%;
+}
+
+.upperForm {
+  color: white;
+  margin-top: -17em;
+  width: 15%;
+  margin-right: 30%;
+  float: right;
+  * {
+    display: block;
+    width: 15em;
+    height: 2.5em;
+    border-radius: 5px;
+  }
+  label {
+    margin-bottom: -1em;
+    margin-top: 1.25em;
+  }
+  button {
+    color: #832FA6;
+    font-style: bold;
+    font-size: 1.25vw;
+    text-transform: uppercase;
+    background: #eee;
+  }
+}
+.undo {
+  margin-right: 30%;
+  float: right;
+  width: 15%;
+  margin-top: -3em;
+  .undoButton {
+    background: #eee;
+    width: 15em;
+    height: 2.5em;
+    border-radius: 5px;
+
+  }
+}
+.monster {
+  width: 3em;
+  height: 3em;
+  img {
+    width: 100%;
+    height: 100%;
+  }
+}
