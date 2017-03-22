@@ -18,7 +18,7 @@ function MooController($log) {
 
   cowsay.list((err, cowfiles) => {
     this.cowfiles = cowfiles;
-    this.current = this.cowfiles[0];
+    this.current = this.cowfiles[7];
   });
 
   this.update = function(input) {

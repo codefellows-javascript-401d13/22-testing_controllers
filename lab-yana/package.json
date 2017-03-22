@@ -7,7 +7,7 @@
     "build": "./node_modules/webpack/bin/webpack.js",
     "watch": "./node_modules/webpack-dev-server/bin/webpack-dev-server.js --inline --hot",
     "lint": "./node_modules/eslint/bin/eslint.js",
-    "test watch": "./node_modules/karma/bin/karma start",
+    "test-watch": "./node_modules/karma/bin/karma start",
     "test": "./node_modules/karma/bin/karma start --single-run"
   },
   "keywords": [],
