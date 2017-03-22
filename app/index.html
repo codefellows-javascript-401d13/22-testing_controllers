@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html ng-app="mooMooApp">
+  <head>
+    <meta charset="utf-8">
+    <title>MooMoo Tests</title>
+  </head>
+  <body>
+    <header>
+      <div class="logo-container">
+        <img id="logo" src="../assets/moo-moo-logo.png">
+        <h1>cowcontrol.io</h1>
+      </div>
+      <nav class="nav-bar" ng-controller="NavController as navCtrl">
+        <ul>
+          <li ng-repeat="route in navCtrl.routes">
+            <a class="nav-link" href="{{ route.url }}">{{ route.name }}</a>
+          </li>
+        </ul>
+      </nav>
+    </header>
+
+    <section class="cow-container" ng-controller="CowsayController as cowsayCtrl"
+    ng-init="cowsayCtrl.current = default">
+
+      <div class="cow-header">
+        <h2> {{ cowsayCtrl.title }}</h2>
+        <p>make it, view it, and undo it!</p>
+      </div>
+
+      <pre class="cow">
+        {{ cowsayCtrl.update(cowsayCtrl.text) }}
+      </pre>
+
+      <form class="opts-container" ng-submit="cowsayCtrl.speak(cowsayCtrl.text)"
+      name="cowsayForm"
+      novalidate>
+        <p>Select a cowfile</p>
+        <select ng-model="cowsayCtrl.current">
+          <option ng-repeat="cowfile in cowsayCtrl.cowfiles" value="{{cowfile}}">
+          {{cowfile}}
+          </option>
+        </select>
+        <p class="cow-opts">What does it say?</p>
+        <input type="text" ng-model="cowsayCtrl.text" required></input>
+        <p class="cow-opts">View it!</p>
+        <button type="submit">CLICK TO VIEW</button>
+      </form>
+
+      <div class="thinline"></div>
+
+      <div ng-show="cowsayCtrl.spoken" class="history">
+        <div class="cow-header">
+          <h2>View it!</h2>
+          <p>check out the cow you just made!</p>
+        </div>
+        <pre class="cow">
+          {{ cowsayCtrl.spoken }}
+        </pre>
+        <div class="opts-container">
+          <button type="button" ng-click="cowsayCtrl.undo()">UNDO THIS COW!</button>
+        </div>
+      </div>
+
+    </section>
+
+    <footer>
+      <p>cowcontrol.io</p>
+    </footer>
+  </body>
+</html>
