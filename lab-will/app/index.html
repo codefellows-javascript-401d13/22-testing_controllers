@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<!-- Connects to entry.js -->
+<html ng-app="cowsayApp">
+  <head>
+    <title>Welcome to Cowville!</title>
+  </head>
+  <body>
+    <header>
+      <!-- Use NavController from entry.js for controlling and name it navCtrl -->
+      <nav ng-controller="NavController as navCtrl">
+        <ul>
+          <!-- Repeats template process for each element in the routes array -->
+          <li ng-repeat="route in navCtrl.routes">
+            <a href="{{ route.url }}">{{ route.name }}</a>
+          </li>
+        </ul>
+      </nav>
+    </header>
+
+    <main>
+      <!-- Use CowsayController from entry.js for controlling and name it cowsayCtrl -->
+      <section
+        class="container"
+        ng-controller="CowsayController as cowsayCtrl"
+        ng-init="cowsayCtrl.current = 'squirrel'">
+        <h2>{{ cowsayCtrl.title }}</h2>
+
+
+        <section class="cowNform">
+
+          <!-- COW AND MESSAGE -->
+          <pre class="cow">
+            {{ cowsayCtrl.update(cowsayCtrl.text) }}
+          </pre>
+
+          <!-- SPEAK FORM -->
+          <form
+            ng-submit="cowsayCtrl.speak(cowsayCtrl.text)"
+            name="cowsayForm"
+            no validate>
+            <select ng-model="cowsayCtrl.current">
+              <!-- Repeats template process -->
+              <option ng-repeat="cowfile in cowsayCtrl.cowfiles" value="{{ cowfile }}">
+                {{ cowfile }}
+              </option>
+            </select>
+
+            <section class="buttons">
+              <!-- INPUT -->
+              <input type="text" ng-model="cowsayCtrl.text" required>
+
+              <!-- SPEAK BUTTON -->
+              <button type="submit">Speak!</button>
+
+            </section>
+
+          </form>
+
+        </section>
+
+        <!-- HISTORY DIV -->
+        <div ng-show="cowsayCtrl.spoken" class="history">
+          <!-- HISTORY MESSAGE -->
+          <pre>
+            {{ cowsayCtrl.spoken }}
+          </pre>
+
+          <!-- BUTTON -->
+          <section class="buttons">
+            <button type="button" ng-click="cowsayCtrl.undo()">Undo!</button>
+          </section>
+
+        </div>
+
+
+      </section>
+    </main>
+  </body>
+</html>
