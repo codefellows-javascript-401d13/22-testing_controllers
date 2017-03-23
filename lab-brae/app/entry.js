@@ -1,7 +1,7 @@
 'use strict';
 
-require('./scss/reset.scss');
-require('./scss/main.scss');
+// require('./scss/reset.scss');
+require('./scss/core.scss');
 
 const angular = require('angular');
 const cowsay = require('cowsay-browser');

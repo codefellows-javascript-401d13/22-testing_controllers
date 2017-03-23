@@ -1,48 +1,8 @@
-body {
-  font-family: helvetica;
-  font-size: 2vw;
-  background: #d8d8d8;
-}
-
-a {
-  text-decoration: none;
-  color: black;
-  cursor: pointer;
-}
-
-h2 {
-  font-size: 1vw;
-  margin-bottom: 5%;
-  color: #4a4a4a;
-  margin-left: 5%;
-}
-
-input[type="text"] {
-  float: left;
-  width: 96%;
-  padding: 2%;
-  border: none;
-}
-
-pre {
-  overflow: auto;
-  width: 50%;
-  border: 2px solid #4a4a4a;
-  font-family: Ubuntu Mono;
-  margin: 5%;
-  margin-left: 10%;
-  // font-size: 43px;
-}
-
 .cow {
   margin-left: 10%;
   font-size: 120%;
 
 }
-
-// .ng-binding {
-//   font-size: 1vw;
-// }
 
 nav {
   height: 4vw;
@@ -106,12 +66,4 @@ nav {
   border-radius: 25px;
   cursor: pointer;
   transition: 350ms all;
-}
-
-footer {
-  // height: 4vw;
-  background: #9b9b9b;
-  padding: 2vw;
-  text-align: right;
-  color: #4a4a4a;
 }
