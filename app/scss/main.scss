@@ -40,6 +40,21 @@ button {
   color: $white;
 }
 
+footer {
+  position: absolute;
+  background-color: $black;
+  height: 50px;
+  width: 100%;
+  color: $white;
+}
+
+footer p {
+  width: 40px;
+  float: right;
+  margin-top: 30px;
+  margin-right: 70px;
+}
+
 .large-box {
   width: 100%;
   height: 400px;
@@ -58,6 +73,7 @@ button {
 
 .small-box {
   margin-right: 5%;
+  margin-top: 65px;
   clear: right;
   width: 100%;
   height: 5%;
@@ -74,4 +90,8 @@ button {
 .small {
   width: 100%;
   border-radius: 5px;
+}
+
+.bottom-button {
+  margin-top: 225px;
 }
