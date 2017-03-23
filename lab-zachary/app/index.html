@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html ng-app="cowsayApp">
+<head>
+  <title>Welcome to Cowville</title>
+</head>
+<body>
+  <nav ng-controller="NavController as nav">
+    <div class="logo">
+      <img src="../assets/icon.png">
+      <span>{{ nav.title }}</span>
+    </div>
+    <ul>
+        <li ng-repeat="link in nav.routes">
+          <a href="{{link.url}}">{{link.name}}</a>
+        </li>
+      </ul>
+      <div class="clearfix"></div>
+  </nav>
+  <main ng-controller="CowsayController as cowsayCtrl">
+    <section>
+      <h2>{{ cowsayCtrl.title }}</h2>
+      <h3>{{ cowsayCtrl.subTitle }}</h3>
+      <div class="field-group">
+        <pre>
+          {{ cowsayCtrl.update(cowsayCtrl.text) }}
+        </pre>
+      <form
+        ng-submit="cowsayCtrl.speak(cowsayCtrl.text)"
+        class="input-wrapper">
+        <div class="field-pair">
+          <label for="cows">Select a cowfile</label>
+          <select name="cows" ng-model="cowsayCtrl.current">
+            <option ng-repeat="cow in cowsayCtrl.cowfiles" value="{{ cow }}">
+            {{ cow }}
+            </option>
+          </select>
+        </div>
+        <div class="field-pair">
+          <label for="cowText">What does it say?</label>
+          <input type="text" ng-model="cowsayCtrl.text">
+        </div>
+        <div class="field-pair">
+        <label for="addButton" ng-click="cowsayCtrl.speak()">View it!</label>
+        <button type="submit">Click to View</button>
+        </div>
+      </form>
+        <div class="clearfix"></div>
+        </div>
+    </section>
+    <section ng-if="cowsayCtrl.spoken">
+      <div class="divider" ></div>
+      <h2>{{ cowsayCtrl.spokenTitle }}</h2>
+      <h3>{{ cowsayCtrl.spokenSubTitle }}</h3>
+      <div class="field-group">
+      <pre>{{ cowsayCtrl.spoken }}</pre>
+      <form ng-submit="cowsayCtrl.undo()" class="input-wrapper">
+        <div class="field-pair">
+          <button type="submit" >Undo this cow!</button>
+
+      </form>
+      </div>
+      <div class="clearfix"></div>
+      </div>
+    </section>
+  </main>
+
+<footer ng-controller="NavController as footer"><p>{{ footer.title }}</p></footer>
+
+</body>
+</html>

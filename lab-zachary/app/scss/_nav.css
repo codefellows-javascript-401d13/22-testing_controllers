@@ -1,0 +1,39 @@
+nav {
+  background: $headerColor;
+  color: $reverseTextColor;
+  font-size: $primaryText;
+  width: 100%;
+
+
+  .logo{
+    width: 48%;
+    float: left;
+    margin: 1%;
+    img {
+      float:left;
+      margin:0 15px 0 15px;
+    }
+
+    span {
+      vertical-align: -webkit-baseline-middle;
+      vertical-align: baseline-middle;
+    }
+  }
+    ul{
+      text-align: right;
+    }
+    li {
+      display: inline-block;
+      margin-right: 2%;
+      margin-top:1%;
+      line-height: 100%;
+      vertical-align: -webkit-baseline-middle;
+      vertical-align: baseline-middle;
+    }
+
+    a {
+        color: $reverseTextColor;
+      }
+
+
+}
