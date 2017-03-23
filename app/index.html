@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html ng-app="cowsayApp">
+<head>
+	<title>Howdy, Cowpoke!</title>
+</head>
+<body>
+	<header>
+		<nav ng-controller="NavController as navCtrl">
+			<ul>
+				<li ng-repeat='route in navCtrl.routes'>
+					<a href="{{ route.url }}">{{ route.name }}</a>
+				</li>
+			</ul>
+		</nav>
+	</header>
+
+	<main>
+		<section
+			class="container"
+			ng-controller="CowsayController as cowsayCtrl"
+			ng-init="cowsayCtrl.current = 'squirrel'">
+      <div class="top-wrapper large-box">
+			<h2>{{ cowsayCtrl.title }}</h2>
+
+			<div class="cow-container medium-box">
+				<pre class="cow">
+					{{ cowsayCtrl.update(cowsayCtrl.text) }}
+				</pre>
+			</div><!--end cow container-->
+
+      <div class="side-box">
+  			<form
+  				ng-submit="cowsayCtrl.speak(cowsayCtrl.text)"
+  				name="cowsayForm"
+  				no validate>
+
+          <div class="select-container small-box">
+    				<select class="small" ng-model="cowsayCtrl.current">
+    					<option ng-repeat="cowfile in cowsayCtrl.cowfiles" value="{{ cowfile }}">
+    						{{ cowfile }}
+    					</option>
+    				</select>
+          </div><!--end of select container-->
+
+          <div class="input-container small-box">
+  				  <input class="small" type="text" ng-model="cowsayCtrl.text" required></input>
+          </div>
+
+          <div class="button-container small-box">
+            <button class="small" type="submit">Speak Cow!</button>
+          </div>
+
+        </form>
+      </div>
+      </div><!--end of top wrapper div-->
+
+      <div ng-show="cowsayCtrl.spoken" class="bottom-wrapper large-box">
+  			<div class="history medium-box">
+  				<pre class="spoken">
+  					{{ cowsayCtrl.spoken }}
+  				</pre>
+        </div>
+
+        <div class="side-box">
+          <div class="button-container small-box bottom-button">
+    				<button class="small" type="button" ng-click="cowsayCtrl.undo()">Unspeak!</button>
+          </div>
+        </div>
+      </div><!--end of bottom wrapper-->
+		</section>
+	</main>
+  <footer>
+    <p>cowcontrol.io</p>
+  </footer>
+</body>
+</html>
