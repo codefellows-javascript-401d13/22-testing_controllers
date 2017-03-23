@@ -1,7 +1,9 @@
 'use strict';
 
-require('./scss/reset.scss');
-require('./scss/main.scss');
+// require('./scss/reset.scss');
+// require('./scss/main.scss');
+
+require('./scss/core.scss');
 
 const angular = require('angular');
 const cowsay = require('cowsay-browser');
@@ -23,7 +25,7 @@ function CowsayController($log){
 
   this.update = function(input){
     $log.debug('cowsayCtrl.update');
-    return cowsay.say({ text: input, || 'Say wuuuut?!', f: this.current });
+    return cowsay.say({ text: input || 'Say wuuuut?!', f: this.current });
   };
 
   this.speak = function(input){
@@ -37,7 +39,7 @@ function CowsayController($log){
     this.history.pop();
     this.spoken = this.history.pop() || '';
   };
-};
+}
 
 cowsayLab.controller('NavController', ['$log', NavController]);
 

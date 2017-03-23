@@ -8,7 +8,7 @@
       <nav ng-controller='NavController as navCtrl' class='navMenu'>
         <div class='navLeft'>
           <div class='monster'>
-            <img src="../assets/cute-monster.svg" alt="">
+            <img src="../assets/cute-monster.svg" alt="creature creeps icon">
           </div>
           <div>Creature Creeps!</div>
         </div>
@@ -29,7 +29,6 @@
             {{ cowsayCtrl.update(cowsayCtrl.text)}}
           </pre>
         </div>
-
         <form
 
         ng-submit='cowsayCtrl.speak(cowsayCtrl.text)'
@@ -58,10 +57,13 @@
             </div>
           </div>
         </form>
+        <div ng-show="cowsayCtrl.text == 'wee' || cowsayCtrl.text == 'kitty'">That is just wild!</div>
+        <div ng-show="cowsayCtrl.current == 'turtle' || cowsayCtrl.current == 'satanic'">Whoa no way!!!</div>
       </section>
     </main>
-    <footer><div>end</div>
-    <p>Icons made by <a href="http://www.freepik.com" title="Freepik">Freepik</a> from <a href="http://www.flaticon.com" title="Flaticon">www.flaticon.com</a> is licensed by <a href="http://creativecommons.org/licenses/by/3.0/" title="Creative Commons BY 3.0" target="_blank">CC 3.0 BY</a></p>
+    <footer>
+      <div>end</div>
+      <p>Icons made by <a href="http://www.freepik.com" title="Freepik">Freepik</a> from <a href="http://www.flaticon.com" title="Flaticon">www.flaticon.com</a> is licensed by <a href="http://creativecommons.org/licenses/by/3.0/" title="Creative Commons BY 3.0" target="_blank">CC 3.0 BY</a></p>
     </footer>
   </body>
 </html>
