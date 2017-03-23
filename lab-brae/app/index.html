@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html ng-app="cowsayApp"> 
+  <head>
+    <title>cow creator</title>
+  </head>
+  <body>
+    <header>
+      <nav ng-controller="Nav Controller as navCtrl">
+        <ul>
+          <li>cowcontrol.io</li>
+          <li ng-repeat="route in navCtrl.routes">
+            <a href="{{ link.url }}">{{ route.name }}</a>
+          </li>
+        </ul>
+      </nav>
+    </header>
+
+    <main>
+      <section
+        class="container"
+        ng-controller="CowsayController as cowsayCtrl"
+        ng-init="cowsayCtrl.current = 'default'">
+        <h2>{{ cowsayCtrl.title }}</h2>
+
+        <pre class="cow">
+          {{ cowsayCtrl.update(cowsayCtrl.text) }}
+        </pre>
+
+        <form
+          ng-submit="cowsayCtrl.speak(cowsayCtrl.text)"
+          name="cowsayForm"
+          no validate>
+          <div id="righttop">
+            <ul>
+              <li><h3>Select a Cowfile</h3></li>
+              <select ng-model="cowsayCtrl.current">
+              <li>
+                <option id="selectcowfile" ng-repeat="cowfile in cowsayCtrl.cowfiles" value="{{ cowfile }}">
+                  {{ cowfile }}
+                </option>
+              </li>
+              </select>
+
+              <li><h3>What does it say?</h3></li>
+              <li><button id="submitbutton" type="submit">CLICK TO VIEW</button></li>
+            </ul>
+          </div>
+
+          <hr>
+
+          <div ng-show="cowsayCtrl.spoken" class="history">
+            <pre>
+              {{ cowsayCtrl.spoken }}
+            </pre>
+
+            <div id="rightbottom">
+              <button id="undobutton" type="button" ng-click"cowsayCtrl.undo()">Undo!</button>
+            </div>
+          </div>
+        </form>
+      </section>
+      <footer>
+        <h3>cowcontrol.io</h3>
+      </footer>
+    </main>
+  </body>
+</html>
+
+          
