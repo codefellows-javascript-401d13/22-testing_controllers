@@ -1,0 +1,17 @@
+$brand-primary: rgb(144, 144, 144);
+$btn-primary: $brand-primary / 2;
+$btn-hover: #31b1c1 ;
+$black: #000;
+$white: #fff;
+$box-std: 100%;
+$gutter-std: 5%;
+$gutter-sm: $gutter-std / 2;
+
+
+// :::: global styles ::::
+
+body {
+ font-family: helvetica;
+ font-size: 2vw;
+ background: $brand-primary * 3;
+}
