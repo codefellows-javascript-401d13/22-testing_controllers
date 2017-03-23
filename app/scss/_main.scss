@@ -10,12 +10,6 @@ $gutter-sm: $gutter-std / 2;
 
 // :::: global styles ::::
 
-body {
- font-family: helvetica;
- font-size: 2vw;
- background: $brand-primary * 3;
-}
-
 a {
  text-decoration: none;
  color: $black;
