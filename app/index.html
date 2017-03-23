@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html ng-app="cowsayApp">
+  <head>
+    <title>Welcome to Cowville!</title>
+  </head>
+  <body>
+    <header>
+      <nav ng-controller="NavController as navCtrl">
+        <h1>CowControl.io</h1>
+        <ul>
+          <li ng-repeat="route in navCtrl.routes">
+            <a href="{{ link.url }}">{{ route.name }}</a>
+          </li>
+        </ul>
+      </nav>
+    </header>
+
+    <main>
+      <section
+        class="container"
+        ng-controller="CowsayController as cowsayCtrl"
+        ng-init="cowsayCtrl.current = 'squirrel'">
+        <div class="headers">
+          <h2>{{ cowsayCtrl.title }}</h2>
+          <h3>{{cowsayCtrl.subTitle}}</h3>
+        </div>
+        <pre class="cow">
+          {{ cowsayCtrl.update(cowsayCtrl.text) }}
+        </pre>
+
+        <form
+          ng-submit="cowsayCtrl.speak(cowsayCtrl.text)"
+          name="cowsayForm"
+          no validate>
+          <div class="inputs">
+            <p class="buttonTitle"> Select a cowfile!</p>
+            <select ng-model="cowsayCtrl.current">
+              <option ng-repeat="cowfile in cowsayCtrl.cowfiles" value="{{ cowfile }}">
+                {{ cowfile }}
+              </option>
+            </select>
+            <p class="buttonTitle">What does it say?</p>
+            <input type="text" ng-model="cowsayCtrl.text" required>
+            <p class="buttonTitle">View It!</p>
+            <button type="submit">Speak!</button>
+          </div>
+          <p class="divider">------------------------------------------------------------------------------</p>
+          <div ng-show="cowsayCtrl.spoken" class="history">
+            <div class="headers">
+              <h2>{{cowsayCtrl.historyTitle}}</h2>
+              <h3>{{cowsayCtrl.historySubTitle}}</h3>
+            </div>
+            <div class="histCow">
+              <pre>
+                {{ cowsayCtrl.spoken }}
+              </pre>
+              <button type="button" ng-click="cowsayCtrl.undo()" class="undo">Undo!</button>
+            </div>
+          </div>
+        </form>
+      </section>
+    </main>
+    <footer>
+      <p> cowcontrol.io </p>
+    </footer>
+  </body>
+</html>

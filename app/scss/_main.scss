@@ -1,0 +1,48 @@
+.undo{
+  width: 40%;
+}
+
+.histCow{
+  display: flex;
+	flex-direction: row;
+	flex-wrap: nowrap;
+	justify-content: space-between;
+	align-items: flex-end;
+	align-content: stretch;
+}
+
+.history{
+  clear: both;
+  margin-top: 25px;
+}
+
+.inputs{
+  height: 100%;
+	display: flex;
+	flex-direction: column;
+	flex-wrap: nowrap;
+	justify-content: space-between;
+	align-items: center;
+	align-content: stretch;
+}
+
+.headers{
+  display: flex;
+	flex-direction: row;
+	flex-wrap: nowrap;
+	justify-content: flex-start;
+	align-items: flex-end;
+	align-content: stretch;
+}
+
+.buttonTitle{
+  margin-top: 3vw;
+  margin-bottom: 3vw;
+  font-size: 2.34vw;
+}
+
+.divider{
+  clear: both;
+  margin: 3vw;
+  font-size: 2vw;
+}

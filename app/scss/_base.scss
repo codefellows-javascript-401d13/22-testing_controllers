@@ -1,0 +1,95 @@
+$tertiaryColor: #555;
+$primaryColor: #999;
+$black: #000;
+$white: #fff;
+
+body{
+  background: $primaryColor;
+  font-family: helvetica;
+  font-size: 1vw;
+}
+
+a{
+  text-decoration: none;
+  color: $primaryColor;
+  cursor: all-scroll;
+}
+nav{
+  background: $tertiaryColor;
+  height: 100px;
+	display: flex;
+	flex-direction: row;
+	flex-wrap: nowrap;
+	justify-content: space-between;
+	align-items: center;
+	align-content: stretch;
+
+  h1{
+    font-size: 5vw;
+  }
+  ul{
+    width: 50%;
+  	display: flex;
+  	flex-direction: row;
+  	flex-wrap: nowrap;
+  	justify-content: space-around;
+  	align-items: flex-end;
+  	align-content: stretch;
+    li{
+      font-size: 3vw;
+      display: inline;
+    }
+  }
+}
+
+
+
+h2{
+  font-size: 6vw;
+}
+
+h3{
+  font-size: 3vw;
+}
+
+section{
+  margin: 100px;
+}
+
+pre{
+  border: 2px solid black;
+  float: left;
+  margin-right: 2vw;
+  font-size: 3vw;
+}
+
+select{
+  width: 80%;
+  height: 50px;
+}
+
+input{
+  width: 80%;
+  height: 50px;
+  margin-bottom: 3vw;
+}
+
+button{
+  width: 80%;
+  height: 50px;
+}
+
+footer{
+  clear: both;
+  height:150px;
+  background: $tertiaryColor;
+	display: flex;
+	flex-direction: row;
+	flex-wrap: nowrap;
+	justify-content: flex-end;
+	align-items: flex-end;
+	align-content: stretch;
+  p{
+    font-size: 3vw;
+  }
+}
