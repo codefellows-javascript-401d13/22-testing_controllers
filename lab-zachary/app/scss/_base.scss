@@ -1,0 +1,37 @@
+$bgColor: #D8D8D8;
+$headerColor: #4A4A4A;
+$footerColor: #9B9B9B;
+$reverseTextColor: #9b9b9b;
+$primaryText: 3.5vw;
+$secondaryText: 2vw;
+$tertiaryText: 1.8vw;
+$fontStack: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+
+body {
+  background: $bgColor;
+  font-family: $fontStack;
+  min-height:100%;
+  a {
+    text-decoration: none;
+    color: #000;
+    &:hover{
+      text-decoration: underline
+    };
+  }
+  h2 {
+    font-size: $primaryText;
+    font-weight: normal;
+
+  }
+  h3 {
+      font-size: $tertiaryText;
+    }
+  .clearfix{
+    clear:both;
+  }
+
+  pre {
+    font-family: Consolas, Courier, monospace;
+    border: 1px solid black;
+  }
+}

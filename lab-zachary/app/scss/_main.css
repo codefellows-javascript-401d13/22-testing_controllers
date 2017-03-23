@@ -1,0 +1,72 @@
+main {
+  max-width: 98%;
+
+  section {
+    width:90%;
+    padding:20px;
+    margin:0 auto 0 auto;
+
+      h2 {
+        display: inline-block;
+
+      }
+        h3 {
+          display: inline-block;
+        }
+
+      div.divider{
+        border-bottom: 2px solid $footerColor;
+      }
+
+      div.field-group{
+        display: flex;
+      }
+      .input-wrapper{
+        display: flex;
+        flex-direction: column;
+        align-items: stretch;
+        justify-content: flex-end;
+        width:28%;
+        position: relative;
+
+      }
+      .field-pair{
+        position: relative;
+        flex-grow: 1;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-end;
+
+        }
+
+        label, button, input, select{
+          height: 30px;
+          width:100%;
+          box-sizing: border-box;
+
+        }
+        label{
+          margin-top:15px;
+        }
+        button, input, select{
+
+        }
+
+        button{
+          background-color: #4A4A4A;
+          color: #fff;
+
+        }
+      pre{
+        font-size: $tertiaryText;
+        padding:2em;
+        margin:0px 3% 0px 0;
+        background: $bgColor;
+        width: 60%;
+        display: inline-block;
+        overflow: hidden;
+        float: left;
+  }
+
+  }
+}
