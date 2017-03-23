@@ -1,0 +1,15 @@
+//:::: Base Styles :::://
+$font-color: #484848;
+
+p {
+  font-family: muli;
+  color: $font-color;
+}
+
+body {
+  width: 900px;
+  height: 100%;
+  background-color: $site-primary;
+  margin: auto;
+  outline: 1px solid black;
+}
