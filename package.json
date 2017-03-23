@@ -11,7 +11,7 @@
     "build": "./node_modules/webpack/bin/webpack.js",
     "test-watch": "./node_modules/karma/bin/karma start",
     "test": "./node_modules/karma/bin/karma start --single-run",
-    "lint": "./node_modules/.bin/eslint ./**/*.js"
+    "lint": "./node_modules/eslint/bin/eslint.js ./**/*.js"
   },
   "repository": {
     "type": "git",
