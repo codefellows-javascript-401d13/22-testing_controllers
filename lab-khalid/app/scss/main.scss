@@ -1,0 +1,47 @@
+$custom: black;
+
+nav {
+  background-color: $custom;
+  color: slategray;
+  ul{
+    // display: inline-block;
+    margin-left: 50%;
+  }
+  li{
+    display: inline-block;
+    // margin-left: 20%;
+    padding: 0 10% 5% 0;
+  }
+  a {
+  text-decoration: none;
+  color: slategrey;
+  }
+}
+
+h2 {
+  font-size: 2vw;
+}
+pre {
+  display: inline-block;
+  border: 2px solid black;
+}
+
+.first{
+  display: inline-block;
+  background-color: dodgerblue;
+}
+form{
+  display: inline;
+  border: 1px solid black;
+  aside{
+    display: inline-block;
+    margin-top: -200px;
+    width: 30%;
+    height: 20vw;
+    background-color: crimson;
+  }
+}
+
+
+
+
