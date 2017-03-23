@@ -1,0 +1,69 @@
+.cow {
+  margin-left: 10%;
+  font-size: 120%;
+
+}
+
+nav {
+  height: 4vw;
+  background: #4a4a4a;
+  padding: 2vw;
+  margin-bottom: 5%;
+
+  li {
+    display: inline-block;
+    margin-right: 3vw;
+  
+  a {
+    font-size: 3vw;
+    color: #9b9b9b;
+    margin-right: 55%;
+    }
+  }
+}
+
+.container {
+  width: 80%;
+  margin-left: 10%;
+}
+
+#righttop {
+  margin-top: -25%;
+  margin-right: 15%;
+  float: right;
+
+}
+
+#rightbottom {
+  margin-top: -10%;
+  margin-right: 20%;
+  float: right;
+
+}
+
+
+
+#submitbutton {
+  width: 50%;
+  padding: 3% 0;
+  margin-bottom: 0;
+  background: #4a4a4a;
+  color: white;
+  border: none;
+  border-radius: 25px;
+  cursor: pointer;
+  transition: 350ms all;
+}
+
+
+#undobutton {
+  width: 200%;
+  padding: 20% 0;
+  margin-bottom: 20px;
+  background: #4a4a4a;
+  color: white;
+  border: none;
+  border-radius: 25px;
+  cursor: pointer;
+  transition: 350ms all;
+}
